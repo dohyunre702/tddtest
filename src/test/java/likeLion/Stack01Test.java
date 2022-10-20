@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.EmptyStackException;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class Stack01Test {
 
     @Test
@@ -35,5 +39,4 @@ public class Stack01Test {
         Assertions.assertEquals(30, stack01.pop());
     }
 
-}
 

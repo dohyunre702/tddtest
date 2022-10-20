@@ -1,5 +1,7 @@
 package likeLion;
 
+import java.util.EmptyStackException;
+
 public class Stack02 {
 
     private final Integer[] arr; //stack 초기화
@@ -20,5 +22,19 @@ public class Stack02 {
     }
 
     public void pop(int value) {
+    }
+
+    public boolean isEmpty() {
+        boolean isEmpty = this.top == 0;
+        return isEmpty;
+    }
+
+    public int peek() {
+        if(isEmpty() throw new EmptyStackException()){
+
+        }
+    }
+
+    public void pop() {
     }
 }

@@ -4,12 +4,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.EmptyStackException;
+
 import static org.junit.jupiter.api.Assertions.*;
 //setup before 사용
 class Stack02Test {
+    Stack02 st = new Stack02();
 
     @BeforeEach //각 테스트가 실행되기 전에 실행되는 구간.
     void setUp() {
+        st.push(10);
+        st.push(20);
     }
 
     @Test
@@ -28,11 +33,31 @@ class Stack02Test {
         Stack02 st = new Stack02();
         st.push(10);
         st.push(20);
+    }
 
-        assertEquals(20, st.pop());
-        assertEquals(10, st.pop());
+    @Test
+    void isEmpty() {
+        Stack02 st = new Stack02();
+        assertTrue(st.isEmpty());
+        st.push(10);
+        assertFalse(st.isEmpty());
+        st.pop();
+        asserTrue(st.isEmpty());
+    }
+    @Test
+    void peek() {
+        Stack02 st = new Stack02();
+        assertThrows(EmptyStackException.class,()-> {
+            st.peek();
+        });
+        st.push(10);
+        int peeked = st.peek();
+        assertEquals(10, peeked);
+    }
 
-
+    @Test
+    void realSteak() {
+        Stack<Integer> =
 
     }
 }
