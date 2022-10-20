@@ -5,9 +5,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
+import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
-//setup before 사용
+
 class Stack02Test {
     Stack02 st = new Stack02();
 
@@ -42,7 +43,7 @@ class Stack02Test {
         st.push(10);
         assertFalse(st.isEmpty());
         st.pop();
-        asserTrue(st.isEmpty());
+        assertTrue(st.isEmpty());
     }
     @Test
     void peek() {
@@ -57,7 +58,7 @@ class Stack02Test {
 
     @Test
     void realSteak() {
-        Stack<Integer> =
+        Stack<Integer> st = new Stack<>();
 
     }
 }
