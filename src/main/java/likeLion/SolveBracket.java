@@ -26,7 +26,7 @@ public class SolveBracket {
         String input = br.readLine();
 
         SolveBracket result = new SolveBracket();
-        result.solution(input); //무조건 false 반환. ")"가 배열에 제대로 들어가지 않았기 때문.
+        result.solution(input); //무조건 false 반환. ")"가 배열에 제대로 들어가지 않았기 때문
 
     }
 }
