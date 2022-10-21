@@ -7,17 +7,14 @@ import java.io.InputStreamReader;
 public class SolveBracket {
 
 
-    public void solution (String a) {
+    public boolean solution (String a) {
         //char 배열로 변환
-        char[] arr = new char[a.length()];
-        for (int i = 0; i < a.length(); i++) {
-            arr[i] = (char) a.indexOf(i); // 에러. a.indexOf(i)는 -1 or 0 반환.
-        }
+        char[] arr = a.toCharArray(); //.toCharArray() : String 문자열을 char 배열로 변환하는 메서드
 
         if (arr[arr.length-1] == (")").charAt(0)) {
-            System.out.println("true");
+            return true;
         } else {
-            System.out.println("false");
+            return false;
         }
     }
 
@@ -26,7 +23,6 @@ public class SolveBracket {
         String input = br.readLine();
 
         SolveBracket result = new SolveBracket();
-        result.solution(input); //무조건 false 반환. ")"가 배열에 제대로 들어가지 않았기 때문
-
+        System.out.println(result.solution(input));
     }
 }
