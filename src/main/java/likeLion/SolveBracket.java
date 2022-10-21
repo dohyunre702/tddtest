@@ -8,7 +8,7 @@ public class SolveBracket {
             for (int i = 0; i <s.length(); i++) {
                 if('(' == s.charAt(i)) {
                     st.push(s.charAt(i));
-                } else if ('(' == s.charAt(i)) {
+                } else if (')' == s.charAt(i)) {
                     if (st.empty()) return false;
                     st.pop();
                 }
